@@ -1,0 +1,5 @@
+#page {margin: 1%; width: 98% text-align: right; padding: 10px 0; clear: both; }
+#page a, #page .current{font-size: 14px; font-family: Arial; margin: 0 2px; }
+#page a, #page .current{border: 1px solid #5FA623; background: #fff; padding: 2px 6px; text-decoration: none; }
+#page .current, .page a:hover{background: #7ab63f; color: #fff; }
+.rows{font-size: 14px; font-family: Arial; margin: 0 2px; }

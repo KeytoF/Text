@@ -1,0 +1,40 @@
+* { margin: 0px; padding: 0px; }
+html,body{margin: 0px;width: 100%; padding: 0px; overflow: hidden; }
+html,body{height: 100%; }
+a:visited {color: blue; } 
+
+.div{margin: 0px; height: 100%; }
+.top{width: 100%; height: 80px; }
+.left{float: left; width:150px; background-color: #F5F5F5; height: auto; text-align: center; 
+	height:-webkit-calc(100% - 80px) !important; height:-moz-calc(100% - 80px) !important; height:calc(100% - 80px) !important;}
+.right{float: right; text-align: center; overflow:auto; padding: 10px; 
+	width:-webkit-calc(100% - 170px) !important; width:-moz-calc(100% - 170px) !important; width:calc(100% - 170px) !important;
+	height:-webkit-calc(100% - 80px) !important; height:-moz-calc(100% - 80px) !important; height:calc(100% - 80px) !important;}
+.iframe_two{width: 90%; border: 0px; }
+
+.top ul{list-style:none; } 
+.top .logo{width: 150px; height: 80px; float:left; } 
+.top .logoimage{width: 150px; height: 80px; }
+.top .topmenu{height: 80px; float: left; 
+	width:-webkit-calc(100% - 150px) !important; width:-moz-calc(100% - 150px) !important; width:calc(100% - 150px) !important; }
+.top .topmenu .divuser{text-align: right; min-width: 150px; }
+.top .topmenu .time{text-align: right; min-width: 265px; min-height: 19px; }
+
+/*顶栏菜单*/
+.top .menu{float: left; margin-left: 1px; margin-right: 1px; line-height:30px; 
+	width:-webkit-calc(100% / 5 - 2px) !important; width:-moz-calc(100% / 5 - 2px) !important; width:calc(100% / 5 - 2px) !important; }
+.top .menu a{display: block; text-align: center; height: 29px; width: 100% !important; } 
+.top .menu a:link{color: white; background: #333 no-repeat 5px 12px; text-decoration: none; }  
+.top .menu a:visited{color: white; text-decoration: underline; } 
+.top .menu a:hover{color: #FFF; font-weight: bold; text-decoration: none; background: #55BCFF no-repeat 5px 12px; } 
+
+/*checkmenu*/
+.top .checkmenu a:link{color: white; background: #BD2D30; }
+.top .checkmenu a:hover{color: #FFF; }  
+
+/*a:link {color: blue; } */
+/*a:hover {color: blue;  } */
+/*#left ul {width: 152px; height: auto; font-size: 14px; list-style: none; }
+#left ul li {border: solid 1px #ddd; }
+#left ul li a {text-align: center; display: block; width: 152px; height: 40px; line-height: 40px; text-decoration: none; }
+*/

@@ -1,0 +1,977 @@
+[ 2016-07-22T16:02:14+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001683s ]
+
+[ 2016-07-22T16:02:15+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+
+[ 2016-07-22T16:02:15+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-07-22T16:02:16+08:00 ] 127.0.0.1 /Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001928s ]
+
+[ 2016-07-22T16:02:16+08:00 ] 127.0.0.1 /Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017585s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001332s ]
+
+[ 2016-07-22T16:02:17+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+
+[ 2016-07-22T16:02:17+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+
+[ 2016-07-22T16:03:44+08:00 ] 127.0.0.1 /Index/logincheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+SQL: SHOW COLUMNS FROM `ot_student` [ RunTime:0.0219s ]
+SQL: SELECT
+				CONCAT(s.stu_year,ot_faculty.fac_numb,ot_major.maj_numb,ot_classs.cla_numb,s.stu_numb) AS stu_numb,
+				stu_name,
+				stu_time,
+				stu_pass,
+				stu_id,
+				ot_faculty.fac_id,
+				ot_classs.cla_id,
+				ot_major.maj_id,
+				stu_auth
+				FROM ot_student s
+				LEFT JOIN ot_classs
+				ON s.cla_id = ot_classs.cla_id
+				LEFT JOIN ot_major
+				ON ot_classs.maj_id = ot_major.maj_id
+				LEFT JOIN ot_faculty
+				ON ot_major.fac_id = ot_faculty.fac_id
+				WHERE stu_sign = 0 AND CONCAT(s.stu_year,ot_faculty.fac_numb,ot_major.maj_numb,ot_classs.cla_numb,s.stu_numb)='0001'
+				ORDER BY stu_id ASC; [ RunTime:0.0036s ]
+
+[ 2016-07-22T16:03:45+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+
+[ 2016-07-22T16:03:45+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2016-07-22T16:03:51+08:00 ] 127.0.0.1 /Index/logincheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `ot_student` [ RunTime:0.0188s ]
+SQL: SELECT
+				CONCAT(s.stu_year,ot_faculty.fac_numb,ot_major.maj_numb,ot_classs.cla_numb,s.stu_numb) AS stu_numb,
+				stu_name,
+				stu_time,
+				stu_pass,
+				stu_id,
+				ot_faculty.fac_id,
+				ot_classs.cla_id,
+				ot_major.maj_id,
+				stu_auth
+				FROM ot_student s
+				LEFT JOIN ot_classs
+				ON s.cla_id = ot_classs.cla_id
+				LEFT JOIN ot_major
+				ON ot_classs.maj_id = ot_major.maj_id
+				LEFT JOIN ot_faculty
+				ON ot_major.fac_id = ot_faculty.fac_id
+				WHERE stu_sign = 0 AND CONCAT(s.stu_year,ot_faculty.fac_numb,ot_major.maj_numb,ot_classs.cla_numb,s.stu_numb)='0001'
+				ORDER BY stu_id ASC; [ RunTime:0.0023s ]
+
+[ 2016-07-22T16:03:51+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2016-07-22T16:03:51+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2016-07-22T16:03:52+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001044s ]
+
+[ 2016-07-22T16:03:52+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+
+[ 2016-07-22T16:03:57+08:00 ] 127.0.0.1 /Index/logincheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+SQL: SHOW COLUMNS FROM `ot_teacher` [ RunTime:0.0209s ]
+SQL: SELECT * FROM `ot_teacher` WHERE `tea_numb` = 1 LIMIT 1   [ RunTime:0.0031s ]
+
+[ 2016-07-22T16:03:57+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2016-07-22T16:03:57+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+
+[ 2016-07-22T16:04:09+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+
+[ 2016-07-22T16:04:09+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-07-22T16:04:15+08:00 ] 127.0.0.1 /Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001467s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001232s ]
+
+[ 2016-07-22T16:04:16+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-07-22T16:04:26+08:00 ] 127.0.0.1 /Index/logincheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001399s ]
+SQL: SHOW COLUMNS FROM `ot_teacher` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `ot_teacher` WHERE `tea_numb` = 1 LIMIT 1   [ RunTime:0.0028s ]
+
+[ 2016-07-22T16:04:29+08:00 ] 127.0.0.1 /Auser/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002722s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\AuserController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.tea_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `ot_student` [ RunTime:0.0199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_student` WHERE ( stu_sign=0 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: SELECT CONCAT(s.stu_year,ot_faculty.fac_numb,ot_major.maj_numb,ot_classs.cla_numb,s.stu_numb) AS stu_numb,
+		stu_name, stu_time, stu_id, cla_name, maj_name, fac_name 
+		FROM ot_student s
+		LEFT JOIN ot_classs 
+		ON s.cla_id=ot_classs.cla_id 
+		LEFT JOIN ot_major 
+		ON ot_classs.maj_id=ot_major.maj_id 
+		LEFT JOIN ot_faculty 
+		ON ot_major.fac_id=ot_faculty.fac_id 
+		WHERE stu_sign=0 AND stu_name LIKE '%%'
+		ORDER BY stu_id ASC [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Use of undefined constant Auser - assumed 'Auser' D:\Project\OnlineText\Application\Runtime\Cache\Home\ce8c5f754719d86eb2115e2b9497a994.php 第 40 行.
+NOTIC: [8] Use of undefined constant Atext - assumed 'Atext' D:\Project\OnlineText\Application\Runtime\Cache\Home\ce8c5f754719d86eb2115e2b9497a994.php 第 41 行.
+NOTIC: [8] Use of undefined constant Apaper - assumed 'Apaper' D:\Project\OnlineText\Application\Runtime\Cache\Home\ce8c5f754719d86eb2115e2b9497a994.php 第 42 行.
+NOTIC: [8] Use of undefined constant Adata - assumed 'Adata' D:\Project\OnlineText\Application\Runtime\Cache\Home\ce8c5f754719d86eb2115e2b9497a994.php 第 43 行.
+NOTIC: [8] Use of undefined constant Agrade - assumed 'Agrade' D:\Project\OnlineText\Application\Runtime\Cache\Home\ce8c5f754719d86eb2115e2b9497a994.php 第 44 行.
+NOTIC: [8] Undefined variable: show D:\Project\OnlineText\Application\Runtime\Cache\Home\ce8c5f754719d86eb2115e2b9497a994.php 第 137 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001259s ]
+
+[ 2016-07-22T16:04:32+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: select VERSION() [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013362s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2016-07-22T16:04:34+08:00 ] 127.0.0.1 /Text/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\TextController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.tea_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000929s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000909s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2016-07-22T16:04:35+08:00 ] 127.0.0.1 /Exam/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.tea_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `ot_grade` [ RunTime:0.0191s ]
+NOTIC: [8] Undefined index: Stu D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 29 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php:95) D:\Project\OnlineText\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php:95) D:\Project\OnlineText\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-07-22T16:04:35+08:00 ] 127.0.0.1 /Data/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\DataController.class.php 第 10 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.tea_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: id D:\Project\OnlineText\Application\Home\Controller\DataController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\8f4a5de4cdc56b6945345fbf5d145ebe.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2016-07-22T16:04:37+08:00 ] 127.0.0.1 /User/index/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+
+[ 2016-07-22T16:04:38+08:00 ] 127.0.0.1 /Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001217s ]
+
+[ 2016-07-22T16:04:52+08:00 ] 127.0.0.1 /Index/logincheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `ot_student` [ RunTime:0.0224s ]
+SQL: SELECT
+				CONCAT(s.stu_year,ot_faculty.fac_numb,ot_major.maj_numb,ot_classs.cla_numb,s.stu_numb) AS stu_numb,
+				stu_name,
+				stu_time,
+				stu_pass,
+				stu_id,
+				ot_faculty.fac_id,
+				ot_classs.cla_id,
+				ot_major.maj_id,
+				stu_auth
+				FROM ot_student s
+				LEFT JOIN ot_classs
+				ON s.cla_id = ot_classs.cla_id
+				LEFT JOIN ot_major
+				ON ot_classs.maj_id = ot_major.maj_id
+				LEFT JOIN ot_faculty
+				ON ot_major.fac_id = ot_faculty.fac_id
+				WHERE stu_sign = 0 AND CONCAT(s.stu_year,ot_faculty.fac_numb,ot_major.maj_numb,ot_classs.cla_numb,s.stu_numb)='201201010103'
+				ORDER BY stu_id ASC; [ RunTime:0.0038s ]
+
+[ 2016-07-22T16:04:54+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001422s ]
+SQL: select VERSION() [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\7b77775f00e57a9d8807c87feb3333f0.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000937s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001018s ]
+
+[ 2016-07-22T16:04:56+08:00 ] 127.0.0.1 /Text/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001541s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\TextController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\a1e6749738be3544ab189d0d86ca0b52.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000820s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2016-07-22T16:04:57+08:00 ] 127.0.0.1 /Exam/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: id D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000423s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\408cbc9b29f7c53f45ba8aa25dfa509e.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014085s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `ot_grade` [ RunTime:0.0179s ]
+SQL: SELECT DISTINCT  `pap_id` FROM `ot_grade` WHERE ( stu_id=1 )  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined variable: pid D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 31 行.
+NOTIC: [8] Undefined index: id D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 42 行.
+SQL: SELECT tea_name,pap_numb,sub_name,pap_time,pap_id
+			FROM ot_paper o
+			LEFT JOIN ot_subject 
+			ON o.sub_id=ot_subject.sub_id
+			LEFT JOIN ot_teacher
+			ON o.tea_id=ot_teacher.tea_id
+			WHERE pap_sign=0 and o.sub_id=0 AND pap_star=1 AND cla_id=1 AND pap_id NOT IN (1,3)
+			ORDER BY pap_id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.036929s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012363s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.025439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.037331s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php:95) D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php:95) D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php:95) D:\Project\OnlineText\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2016-07-22T16:04:58+08:00 ] 127.0.0.1 /Exam/index.html?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `ot_grade` [ RunTime:0.0205s ]
+SQL: SELECT DISTINCT  `pap_id` FROM `ot_grade` WHERE ( stu_id=1 )  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined variable: pid D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 31 行.
+SQL: SELECT tea_name,pap_numb,sub_name,pap_time,pap_id
+			FROM ot_paper o
+			LEFT JOIN ot_subject 
+			ON o.sub_id=ot_subject.sub_id
+			LEFT JOIN ot_teacher
+			ON o.tea_id=ot_teacher.tea_id
+			WHERE pap_sign=0 and o.sub_id=3 AND pap_star=1 AND cla_id=1 AND pap_id NOT IN (1,3)
+			ORDER BY pap_id [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000786s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2016-07-22T16:05:00+08:00 ] 127.0.0.1 /Exam/index.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `ot_grade` [ RunTime:0.0192s ]
+SQL: SELECT DISTINCT  `pap_id` FROM `ot_grade` WHERE ( stu_id=1 )  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined variable: pid D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 31 行.
+SQL: SELECT tea_name,pap_numb,sub_name,pap_time,pap_id
+			FROM ot_paper o
+			LEFT JOIN ot_subject 
+			ON o.sub_id=ot_subject.sub_id
+			LEFT JOIN ot_teacher
+			ON o.tea_id=ot_teacher.tea_id
+			WHERE pap_sign=0 and o.sub_id=1 AND pap_star=1 AND cla_id=1 AND pap_id NOT IN (1,3)
+			ORDER BY pap_id [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2016-07-22T16:05:02+08:00 ] 127.0.0.1 /Exam/index.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `ot_grade` [ RunTime:0.0184s ]
+SQL: SELECT DISTINCT  `pap_id` FROM `ot_grade` WHERE ( stu_id=1 )  [ RunTime:0.0032s ]
+NOTIC: [8] Undefined variable: pid D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 31 行.
+SQL: SELECT tea_name,pap_numb,sub_name,pap_time,pap_id
+			FROM ot_paper o
+			LEFT JOIN ot_subject 
+			ON o.sub_id=ot_subject.sub_id
+			LEFT JOIN ot_teacher
+			ON o.tea_id=ot_teacher.tea_id
+			WHERE pap_sign=0 and o.sub_id=2 AND pap_star=1 AND cla_id=1 AND pap_id NOT IN (1,3)
+			ORDER BY pap_id [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-07-22T16:05:04+08:00 ] 127.0.0.1 /Exam/exam.html?pap_id=2&id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `ot_paper` [ RunTime:0.0186s ]
+SQL: SELECT * FROM `ot_paper` WHERE `pap_id` = 2 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ot_score` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `ot_score` WHERE `sco_id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `ot_single` [ RunTime:0.0204s ]
+SQL: SHOW COLUMNS FROM `ot_multiple` [ RunTime:0.0183s ]
+SQL: SHOW COLUMNS FROM `ot_judge` [ RunTime:0.0191s ]
+SQL: SHOW COLUMNS FROM `ot_cloze` [ RunTime:0.0175s ]
+SQL: SHOW COLUMNS FROM `ot_answer` [ RunTime:0.0225s ]
+SQL: SELECT * FROM `ot_single` WHERE ( sin_sign=0 and sub_id=2 ) ORDER BY RAND(100) LIMIT 4   [ RunTime:0.0118s ]
+SQL: SELECT * FROM `ot_multiple` WHERE ( mul_sign=0 and sub_id=2 ) ORDER BY RAND(78) LIMIT 4   [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ot_judge` WHERE ( jud_sign=0 and sub_id=2 ) ORDER BY RAND(58) LIMIT 4   [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ot_cloze` WHERE ( clo_sign=0 and sub_id=2 ) ORDER BY RAND(14) LIMIT 4   [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ot_answer` WHERE ( ans_sign=0 and sub_id=2 ) ORDER BY RAND(46) LIMIT 4   [ RunTime:0.0107s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 71 行.
+NOTIC: [8] Undefined index: mul_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 127 行.
+NOTIC: [8] Undefined index: mul_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 128 行.
+NOTIC: [8] Undefined index: mul_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 129 行.
+NOTIC: [8] Undefined index: mul_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 127 行.
+NOTIC: [8] Undefined index: mul_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 128 行.
+NOTIC: [8] Undefined index: mul_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 129 行.
+NOTIC: [8] Undefined index: mul_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 127 行.
+NOTIC: [8] Undefined index: mul_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 128 行.
+NOTIC: [8] Undefined index: mul_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 129 行.
+NOTIC: [8] Undefined index: mul_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 127 行.
+NOTIC: [8] Undefined index: mul_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 128 行.
+NOTIC: [8] Undefined index: mul_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 129 行.
+NOTIC: [8] Undefined index: jud_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 170 行.
+NOTIC: [8] Undefined index: jud_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 171 行.
+NOTIC: [8] Undefined index: jud_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 172 行.
+NOTIC: [8] Undefined index: jud_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 170 行.
+NOTIC: [8] Undefined index: jud_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 171 行.
+NOTIC: [8] Undefined index: jud_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 172 行.
+NOTIC: [8] Undefined index: jud_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 170 行.
+NOTIC: [8] Undefined index: jud_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 171 行.
+NOTIC: [8] Undefined index: jud_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 172 行.
+NOTIC: [8] Undefined index: jud_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 170 行.
+NOTIC: [8] Undefined index: jud_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 171 行.
+NOTIC: [8] Undefined index: jud_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 172 行.
+NOTIC: [8] Undefined index: clo_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 185 行.
+NOTIC: [8] Undefined index: clo_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 186 行.
+NOTIC: [8] Undefined index: clo_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 187 行.
+NOTIC: [8] Undefined index: clo_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 185 行.
+NOTIC: [8] Undefined index: clo_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 186 行.
+NOTIC: [8] Undefined index: clo_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 187 行.
+NOTIC: [8] Undefined index: clo_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 185 行.
+NOTIC: [8] Undefined index: clo_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 186 行.
+NOTIC: [8] Undefined index: clo_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 187 行.
+NOTIC: [8] Undefined index: clo_id D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 185 行.
+NOTIC: [8] Undefined index: clo_righ D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 186 行.
+NOTIC: [8] Undefined index: clo_all D:\Project\OnlineText\Application\Runtime\Cache\Home\fd5a02d89b74559f1f1efe16613d7717.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2016-07-22T16:05:05+08:00 ] 127.0.0.1 /Exam/countDown
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001632s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001115s ]
+
+[ 2016-07-22T16:05:06+08:00 ] 127.0.0.1 /Exam/countDown
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000950s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+
+[ 2016-07-22T16:05:07+08:00 ] 127.0.0.1 /Exam/countDown
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000944s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2016-07-22T16:05:08+08:00 ] 127.0.0.1 /Exam/countDown
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000989s ]
+
+[ 2016-07-22T16:05:09+08:00 ] 127.0.0.1 /Exam/exam.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `ot_grade` [ RunTime:0.0204s ]
+SQL: SELECT DISTINCT  `pap_id` FROM `ot_grade` WHERE ( stu_id=1 )  [ RunTime:0.0037s ]
+NOTIC: [8] Undefined variable: pid D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 31 行.
+SQL: SELECT tea_name,pap_numb,sub_name,pap_time,pap_id
+			FROM ot_paper o
+			LEFT JOIN ot_subject 
+			ON o.sub_id=ot_subject.sub_id
+			LEFT JOIN ot_teacher
+			ON o.tea_id=ot_teacher.tea_id
+			WHERE pap_sign=0 and o.sub_id=2 AND pap_star=1 AND cla_id=1 AND pap_id NOT IN (1,3)
+			ORDER BY pap_id [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 42 行.
+NOTIC: [8] Use of undefined constant Text - assumed 'Text' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 43 行.
+NOTIC: [8] Use of undefined constant Exam - assumed 'Exam' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 44 行.
+NOTIC: [8] Use of undefined constant Data - assumed 'Data' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 45 行.
+NOTIC: [8] Use of undefined constant User - assumed 'User' D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 46 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+NOTIC: [8] Undefined index: URL D:\Project\OnlineText\Application\Runtime\Cache\Home\17692862cdb27e39ce56ba75f7cdb008.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001178s ]
+
+[ 2016-07-22T16:05:09+08:00 ] 127.0.0.1 /Exam/countDown
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+NOTIC: [8] Undefined index: User D:\Project\OnlineText\Application\Home\Controller\ExamController.class.php 第 9 行.
+SQL: SELECT ot_subject.sub_name,a.sub_id
+					FROM ot_arrangement a 
+					RIGHT JOIN ot_subject
+					ON ot_subject.sub_id=a.sub_id 
+					WHERE a.cla_id=1 AND sub_sign=0 AND arr_sign=0
+					ORDER BY a.arr_id ASC [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000951s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001041s ]
+
